@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { CSSTransition } from "react-transition-group";
 import "../styles/LoginPage.css"; // Import the CSS file for styling
 
-function LoginPage() {
+export default function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loggedIn, setLoggedIn] = useState(false);
@@ -52,4 +52,4 @@ function LoginPage() {
   );
 }
 
-export default LoginPage;
+//export default LoginPage;

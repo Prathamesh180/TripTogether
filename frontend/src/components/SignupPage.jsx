@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../styles/SignupPage.css"; // Import the CSS file for styling
 
-function SignupPage() {
+export default function SignupPage() {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
@@ -95,4 +95,4 @@ function SignupPage() {
   );
 }
 
-export default SignupPage;
+//export default SignupPage;

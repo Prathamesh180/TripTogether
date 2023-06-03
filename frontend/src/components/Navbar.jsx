@@ -33,35 +33,31 @@ const NavLink = styled.a`
   }
 `;
 
-function Navbar() {
+export default function Navbar() {
   return (
     <Nav>
       <Logo href="#"> tripTogether</Logo>
       <NavLinks>
         <NavItem>
-          <NavLink to="/post">Post</NavLink>
+          <NavLink href="/HomePage">Home</NavLink>
         </NavItem>
         <NavItem>
-          <NavLink to="/about">About</NavLink>
+          <NavLink href="/AboutPage">About</NavLink>
         </NavItem>
-        {/* <NavItem>
-          <NavLink href="#services">Services</NavLink>
-        </NavItem> */}
+        
         <NavItem>
-          <NavLink to="/contact">Contact</NavLink>
+          <NavLink href="/ContactPage">Contact</NavLink>
         </NavItem>
         <NavItem>
-          <NavLink to="/signup">Join</NavLink>
+          <NavLink href="/SignupPage">Join</NavLink>
         </NavItem>
         <NavItem>
-          <NavLink to="/login">Login</NavLink>
+          <NavLink href="/LoginPage">Login</NavLink>
         </NavItem>
-        {/* <NavItem>
-          <NavLink href="#weather">Weather</NavLink>
-        </NavItem> */}
+        
       </NavLinks>
     </Nav>
   );
 }
 
-export default Navbar;
+//export default Navbar;

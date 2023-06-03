@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../styles/ContactPage.css';
 
-const ContactPage = () => {
+ export default function ContactPage()  {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
@@ -56,4 +56,4 @@ const ContactPage = () => {
   );
 };
 
-export default ContactPage;
+//export default ContactPage;

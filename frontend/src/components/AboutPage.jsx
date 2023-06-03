@@ -19,7 +19,7 @@ const AboutText = styled.p`
   width: 60%;
 `;
 
-function AboutSection() {
+export default function AboutSection() {
   return (
     <About id="/about">
       <Heading>About</Heading>
@@ -31,4 +31,4 @@ function AboutSection() {
   );
 }
 
-export default AboutSection;
+//export default AboutSection;

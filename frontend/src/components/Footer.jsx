@@ -12,7 +12,7 @@ const FooterWrapper = styled.footer`
   }
 `;
 
-function Footer() {
+export default function Footer() {
   return (
     <FooterWrapper>
       <p>&copy; 2023 TripTogether. All rights reserved.</p>
@@ -20,4 +20,4 @@ function Footer() {
   );
 }
 
-export default Footer;
+//export default Footer;

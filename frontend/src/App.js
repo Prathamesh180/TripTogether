@@ -4,17 +4,20 @@ import React from 'react';
 
 import './App.css';
 
-// import Routers from './components/Routers';
+ import Routers from './components/Routers';
 // import HeroSection from './components/HeroSection';
 //import LoginPage from './components/SignupPage';
-import SignupPage from './components/SignupPage.jsx';
+//import SignupPage from './components/SignupPage.jsx';
+import Navbar from './components/Navbar.jsx'; 
 
 
 
 function App() {
   return (
      <div className="App">
-      <SignupPage/>
+      {/* <SignupPage/> */}
+      <Navbar/>
+      <Routers/>
 
     
      </div>

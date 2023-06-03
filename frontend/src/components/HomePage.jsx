@@ -43,7 +43,7 @@ const HeroButton = styled(animated.button)`
   margin: 20px;
 `;
 
-const HeroSection = () => {
+export default function HeroSection() {
   const props = useSpring({
     from: { opacity: 0, transform: 'translateY(-50px)' },
     to: { opacity: 1, transform: 'translateY(0)' },
@@ -66,4 +66,4 @@ const HeroSection = () => {
   );
 };
 
-export default HeroSection;
+//export default HeroSection;

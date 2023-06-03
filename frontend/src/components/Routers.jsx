@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 //import { Link } from "react-router-dom";
 
-
-//import HeroSection from "./HeroSection";
+import AboutPage from "./AboutPage";
+import HomePage from "./HomePage";
 import ContactPage from "./ContactPage";
 import SignupPage from "./SignupPage";
 import LoginPage from "./LoginPage";
@@ -15,12 +15,14 @@ export default function RouterPage() {
 
       <Router>
         <Routes>
-          {/* //<Route path="/" exact element={<HeroSection />} /> */}
-          
-          <Route path="/Contact" exact element={<ContactPage />} />
+          <Route path="/AboutPage" exact element={<AboutPage />} />
 
-          <Route path="/signup" exact element={<SignupPage />} />
-          <Route path="/login" exact element={<LoginPage />} />
+          <Route path="/HomePage" exact element={<HomePage />} />
+          
+          <Route path="/ContactPage" exact element={<ContactPage />} />
+
+          <Route path="/SignupPage" exact element={<SignupPage />} />
+          <Route path="/LoginPage" exact element={<LoginPage />} />
 
          
           
