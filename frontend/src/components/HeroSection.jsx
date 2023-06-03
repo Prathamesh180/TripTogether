@@ -28,14 +28,19 @@ const HeroSubheading = styled(animated.p)`
 `;
 
 const HeroButton = styled(animated.button)`
+  @media only screen and (max-width: 440px) {
+    display: flex;
+    text-align: center;
+  }
   font-size: 1.5rem;
   font-weight: 600;
-  padding: 1.5rem 3rem;
+  padding: 1rem 2rem;
   border-radius: 3rem;
   background-color: #7f58af;
   color: #fff;
   border: none;
   cursor: pointer;
+  margin: 20px;
 `;
 
 const HeroSection = () => {
@@ -53,7 +58,10 @@ const HeroSection = () => {
       <HeroSubheading className="hero-subheading">
       Your one-stop destination for all things...!
       </HeroSubheading>
+      <div>
       <HeroButton className="hero-button">Join Trip</HeroButton>
+      <HeroButton className="hero-button">Form Trip</HeroButton>
+      </div>
     </Hero>
   );
 };

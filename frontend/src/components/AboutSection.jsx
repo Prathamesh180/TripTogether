@@ -15,16 +15,17 @@ const AboutText = styled.p`
   font-size: 1.6rem;
   line-height: 2.4rem;
   text-align: center;
+  margin: auto;
+  width: 60%;
 `;
 
 function AboutSection() {
   return (
     <About id="about">
-      <Heading>About Me</Heading>
+      <Heading>About</Heading>
       <AboutText>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis euismod augue vitae leo
-        consequat consequat. Aliquam erat volutpat. Sed gravida sem in est maximus, ac commodo
-        libero euismod.
+      TripTogether is an team forming website to form a team to go for weekend
+      with like minded and exciting people to add fun to your journey.
       </AboutText>
     </About>
   );
