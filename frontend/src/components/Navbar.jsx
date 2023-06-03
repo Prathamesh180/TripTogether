@@ -50,6 +50,12 @@ function Navbar() {
         <NavItem>
           <NavLink href="#contact">Contact</NavLink>
         </NavItem>
+        <NavItem>
+          <NavLink href="#signup">Join</NavLink>
+        </NavItem>
+        <NavItem>
+          <NavLink href="#login">Login</NavLink>
+        </NavItem>
         {/* <NavItem>
           <NavLink href="#weather">Weather</NavLink>
         </NavItem> */}
