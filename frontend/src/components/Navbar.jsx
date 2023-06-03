@@ -44,9 +44,9 @@ function Navbar() {
         <NavItem>
           <NavLink href="#about">About</NavLink>
         </NavItem>
-        <NavItem>
+        {/* <NavItem>
           <NavLink href="#services">Services</NavLink>
-        </NavItem>
+        </NavItem> */}
         <NavItem>
           <NavLink href="#contact">Contact</NavLink>
         </NavItem>

@@ -15,7 +15,7 @@ const FooterWrapper = styled.footer`
 function Footer() {
   return (
     <FooterWrapper>
-      <p>&copy; 2023 Kiran Patil. All rights reserved.</p>
+      <p>&copy; 2023 TripTogether. All rights reserved.</p>
     </FooterWrapper>
   );
 }
