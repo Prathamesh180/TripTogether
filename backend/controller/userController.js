@@ -5,16 +5,20 @@ const crypto = require("crypto");
 
 exports.signup = async (req, res, next) => {
   try {
-    const { name, email, password, phone } = req.body;
+    const { name, email, password, phone, interests } = req.body;
 
     if (!email || !name || !password || !phone) {
-      return res.status(400).json({ message: "Name, Email, and password are required" });
+      return res
+        .status(400)
+        .json({ message: "Name, Email, and password are required" });
     }
 
     // Check if a user with the same email already exists
     const existingUser = await User.findOne({ email });
     if (existingUser) {
-      return res.status(400).json({ message: "User with this email already exists" });
+      return res
+        .status(400)
+        .json({ message: "User with this email already exists" });
     }
 
     // Create a new user
@@ -23,17 +27,16 @@ exports.signup = async (req, res, next) => {
       email,
       password,
       phone,
+      interests,
     });
 
     // Send the response with the newly created user
     res.status(201).json({ user });
-
   } catch (err) {
     console.log(err);
     res.status(500).json({ message: "Something went wrong. Please try again" });
   }
 };
-
 
 exports.login = async (req, res, next) => {
   try {
@@ -107,5 +110,25 @@ exports.getAllTrips = async (req, res, next) => {
   } catch (err) {
     console.log(err);
     next(err);
+  }
+};
+
+exports.findUsersWithSimilarInterests = async (req, res, next) => {
+  try {
+    const currentUser = req.user;
+    const currentUserInterests = currentUser.interests;
+
+    const matchedUsers = await User.find({
+      interests: { $in: currentUserInterests },
+    });
+
+    res
+      .status(200)
+      .json({ matchedUsers: matchedUsers.map((user) => user.toObject()) });
+  } catch (error) {
+    console.log(error);
+    res
+      .status(500)
+      .json({ message: "Error finding users with similar interests" });
   }
 };
