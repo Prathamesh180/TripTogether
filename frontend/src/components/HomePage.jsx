@@ -3,8 +3,11 @@ import styled from 'styled-components';
 import { useSpring, animated } from 'react-spring';
 
 const Hero = styled(animated.section)`
+background-image: url("../images/background2.jpg");
+background-repeat: no-repeat;
+background-size: cover;
   background-color: #f8f8f8;
-  height: 100vh;
+  height: 85.4vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -53,10 +56,10 @@ export default function HeroSection() {
   return (
     <Hero style={props}>
       <HeroHeading className="hero-heading">
-        Plan here...!
+        Hey Buddy...!
       </HeroHeading>
       <HeroSubheading className="hero-subheading">
-      Your one-stop destination for all things...!
+      Search your companion here...!
       </HeroSubheading>
       <div>
       <HeroButton className="hero-button">Join Trip</HeroButton>
