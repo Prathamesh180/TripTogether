@@ -108,7 +108,7 @@ export function SignupPage() {
 
   return (
     <div className="container" id="/signup">
-      <h2>Signup Page</h2>
+      <h2>Signup</h2>
       <form onSubmit={handleSubmit}>
         {/* Form inputs */}
         <label>

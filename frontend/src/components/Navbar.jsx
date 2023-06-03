@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Nav = styled.nav`
+background-color: rgb(224, 222, 182);
+
   display: flex;
   justify-content: space-between;
   align-items: center;

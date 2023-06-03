@@ -2,8 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 
 const About = styled.section`
-margine:auto:
+  margine:auto;
   padding: 5.4rem;
+  height:60vh;
 `;
 
 const Heading = styled.h2`

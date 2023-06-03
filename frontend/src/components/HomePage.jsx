@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { useSpring, animated } from 'react-spring';
 
 const Hero = styled(animated.section)`
-background-image: url("../images/background2.jpg");
+ background-image: url("");
 background-repeat: no-repeat;
 background-size: cover;
   background-color: #f8f8f8;
@@ -39,7 +39,7 @@ const HeroButton = styled(animated.button)`
   font-weight: 600;
   padding: 1rem 2rem;
   border-radius: 3rem;
-  background-color: #7f58af;
+  background-color: rgb(236, 226, 80);
   color: #fff;
   border: none;
   cursor: pointer;
@@ -62,8 +62,8 @@ export default function HeroSection() {
       Search your companion here...!
       </HeroSubheading>
       <div>
-      <HeroButton className="hero-button">Join Trip</HeroButton>
-      <HeroButton className="hero-button">Form Trip</HeroButton>
+      <HeroButton className="hero-button"><a href="/SignupPage">Join Trip</a></HeroButton>
+      <HeroButton className="hero-button"><a href="/LoginPage"><strong>Form Trip</strong></a></HeroButton>
       </div>
     </Hero>
   );
