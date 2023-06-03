@@ -1,5 +1,5 @@
-const { error } = require("console");
 const User = require("../models/user");
+const Trip = require("../models/trip");
 const cookieToken = require("../utils/cookieToken");
 const crypto = require("crypto");
 
@@ -47,9 +47,56 @@ exports.login = async (req, res, next) => {
     if (!isPasswordCorrect) {
       return next(new Error("Password is incorrect"));
     }
-
+    console.log(user);
     cookieToken(user, res);
   } catch (err) {
     console.log(err);
+  }
+};
+
+exports.createTrip = async (req, res, next) => {
+  try {
+    const { date, time, member, gender, age, location } = req.body;
+
+    // Check if all required fields are provided
+    if (!date || !time || !member || !gender || !age || !location) {
+      return next(new Error("Please provide all the required fields"));
+    }
+
+    // Create the trip
+    const trip = await Trip.create({
+      date,
+      time,
+      member,
+      gender,
+      age,
+      location,
+      createdBy: req.user._id,
+    });
+
+    console.log(user);
+    res.status(201).json({
+      success: true,
+      trip,
+    });
+  } catch (err) {
+    console.log(err);
+    next(err);
+  }
+};
+
+exports.getAllTrips = async (req, res, next) => {
+  try {
+    const trips = await Trip.find()
+      .populate("createdBy", "name email")
+      .maxTimeMS(30000);
+
+    res.status(200).json({
+      success: true,
+      trips,
+    });
+  } catch (err) {
+    console.log(err);
+    next(err);
   }
 };
