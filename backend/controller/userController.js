@@ -8,11 +8,16 @@ exports.signup = async (req, res, next) => {
     const { name, email, password, phone } = req.body;
 
     if (!email || !name || !password || !phone) {
-      return next(new Error("Name, Email, and password is required"));
+      return res.status(400).json({ message: "Name, Email, and password are required" });
     }
 
-    // If the files are sent then it will handel that
+    // Check if a user with the same email already exists
+    const existingUser = await User.findOne({ email });
+    if (existingUser) {
+      return res.status(400).json({ message: "User with this email already exists" });
+    }
 
+    // Create a new user
     const user = await User.create({
       name,
       email,
@@ -20,11 +25,15 @@ exports.signup = async (req, res, next) => {
       phone,
     });
 
-    cookieToken(user, res);
+    // Send the response with the newly created user
+    res.status(201).json({ user });
+
   } catch (err) {
     console.log(err);
+    res.status(500).json({ message: "Something went wrong. Please try again" });
   }
 };
+
 
 exports.login = async (req, res, next) => {
   try {

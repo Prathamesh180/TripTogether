@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { CSSTransition } from "react-transition-group";
-import "./LoginPage.css"; // Import the CSS file for styling
+import "../styles/LoginPage.css"; // Import the CSS file for styling
 
 function LoginPage() {
   const [email, setEmail] = useState("");
@@ -17,7 +17,7 @@ function LoginPage() {
   };
 
   return (
-    <div className="container" id="login">
+    <div className="container" id="/login">
       <h2>Login Page</h2>
       <form onSubmit={handleSubmit}>
         <label>

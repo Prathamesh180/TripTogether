@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './ContactPage.css';
+import '../styles/ContactPage.css';
 
 const ContactPage = () => {
   const [name, setName] = useState('');
@@ -18,7 +18,7 @@ const ContactPage = () => {
   };
 
   return (
-    <div className="contact-page">
+    <div className="contact-page" id="/contact">
       <h1>Contact Us</h1>
       <form onSubmit={handleSubmit}>
         <div className="form-group">

@@ -1,27 +1,56 @@
 import React, { useState } from "react";
-import "./SignupPage.css"; // Import the CSS file for styling
+import "../styles/SignupPage.css"; // Import the CSS file for styling
 
 function SignupPage() {
   const [name, setName] = useState("");
-  const [contact, setContact] = useState("");
+  const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Perform signup logic here with the collected credentials
-    console.log("Signup credentials:", { name, contact, email, password });
-    // Reset the form
-    setName("");
-    setContact("");
-    setEmail("");
-    setPassword("");
+
+    const data = {
+      name: name,
+      phone: phone,
+      email: email,
+      password: password,
+    };
+
+    try {
+      const response = await fetch("http://localhost:8000/api/v1/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        // Registration successful
+        setSuccessMessage("Signup successful!");
+        // Reset form inputs
+        setName("");
+        setPhone("");
+        setEmail("");
+        setPassword("");
+      } else {
+        const errorData = await response.json();
+        setErrorMessage(errorData.message || "Something went wrong.");
+      }
+    } catch (error) {
+      setErrorMessage("Something went wrong. Please try again.");
+      console.error("Error:", error);
+    }
   };
 
   return (
-    <div className="container" id="signup">
+    <div className="container" id="/signup">
       <h2>Signup Page</h2>
       <form onSubmit={handleSubmit}>
+        {/* Form inputs */}
         <label>
           Name:
           <input
@@ -32,11 +61,11 @@ function SignupPage() {
         </label>
         <br />
         <label>
-          Contact:
+          Phone:
           <input
             type="text"
-            value={contact}
-            onChange={(e) => setContact(e.target.value)}
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
           />
         </label>
         <br />
@@ -60,6 +89,8 @@ function SignupPage() {
         <br />
         <button type="submit">Signup</button>
       </form>
+      {successMessage && <p className="success-message">{successMessage}</p>}
+      {errorMessage && <p className="error-message">{errorMessage}</p>}
     </div>
   );
 }

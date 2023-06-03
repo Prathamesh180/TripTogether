@@ -39,22 +39,22 @@ function Navbar() {
       <Logo href="#"> tripTogether</Logo>
       <NavLinks>
         <NavItem>
-          <NavLink href="#post">Post</NavLink>
+          <NavLink to="/post">Post</NavLink>
         </NavItem>
         <NavItem>
-          <NavLink href="#about">About</NavLink>
+          <NavLink to="/about">About</NavLink>
         </NavItem>
         {/* <NavItem>
           <NavLink href="#services">Services</NavLink>
         </NavItem> */}
         <NavItem>
-          <NavLink href="#contact">Contact</NavLink>
+          <NavLink to="/contact">Contact</NavLink>
         </NavItem>
         <NavItem>
-          <NavLink href="#signup">Join</NavLink>
+          <NavLink to="/signup">Join</NavLink>
         </NavItem>
         <NavItem>
-          <NavLink href="#login">Login</NavLink>
+          <NavLink to="/login">Login</NavLink>
         </NavItem>
         {/* <NavItem>
           <NavLink href="#weather">Weather</NavLink>

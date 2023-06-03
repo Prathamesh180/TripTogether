@@ -21,7 +21,7 @@ const AboutText = styled.p`
 
 function AboutSection() {
   return (
-    <About id="about">
+    <About id="/about">
       <Heading>About</Heading>
       <AboutText>
       TripTogether is an team forming website to form a team to go for weekend
