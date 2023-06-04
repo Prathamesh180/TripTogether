@@ -31,7 +31,7 @@ const FormTrip = () => {
       const urls = await Promise.all(
         Array.from({ length: 9 }, (_, index) => {
           const imageNumber = index + 1;
-          return import(`../../public/images/i${imageNumber}.png`)
+          return import(`../../public/images/i${imageNumber}.jpg`)
             .then((module) => module.default)
             .catch((error) => {
               console.error('Error loading image:', error);

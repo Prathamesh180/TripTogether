@@ -33,6 +33,7 @@ const HeroSubheading = styled(animated.p)`
 const HeroButton = styled(animated.button)`
   @media only screen and (max-width: 440px) {
     display: flex;
+    backgroud-color:rgb(224, 222, 182);
     text-align: center;
   }
   font-size: 1.5rem;
@@ -40,7 +41,7 @@ const HeroButton = styled(animated.button)`
   padding: 1rem 2rem;
   border-radius: 3rem;
   
-  color: #fff;
+  background-color:coffee color;
   border: none;
   cursor: pointer;
   margin: 20px;
@@ -50,7 +51,7 @@ export default function HeroSection() {
   const props = useSpring({
     from: { opacity: 0, transform: 'translateY(-50px)' },
     to: { opacity: 1, transform: 'translateY(0)' },
-    config: { duration: 600 },
+    config: { duration: 500 },
   });
 
   return (
@@ -62,8 +63,8 @@ export default function HeroSection() {
       Search your companion here...!
       </HeroSubheading>
       <div>
-      <HeroButton className="hero-button"><a href="/JoinUs">Join Trip</a></HeroButton>
-      <HeroButton className="hero-button"><a href="/MakeMyTrip"><strong>Form Trip</strong></a></HeroButton>
+      <HeroButton className="hero-button"><a href="/JoinUs"><span style={{ color: 'rgb(224, 222, 182)' }}>Join Trip</span></a></HeroButton>
+      <HeroButton className="hero-button"><a href="/MakeMyTrip"><span style={{ color: 'rgb(224, 222, 182)' }}>Form Trip</span></a></HeroButton>
       </div>
     </Hero>
   );

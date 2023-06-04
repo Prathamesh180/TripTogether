@@ -23,7 +23,7 @@ const NavLinks = styled.ul`
 `;
 
 const NavItem = styled.li`
-  margin: 0 1rem;
+  margin: 0 2rem;
 `;
 
 const NavLink = styled.a`
@@ -41,18 +41,24 @@ const Logo = styled.a`
   color: #333;
 `;
 
-const LogoImage = styled.img`
-  width: 30px;
-  height: 30px;
-  margin-right: 0.5rem;
-`;
+// const LogoImage = styled.img`
+//   width: 40px;
+//   height: 40px;
+//   margin-right: 0.5rem;
+// `;
 
 export default function Navbar() {
   return (
     <Nav>
-    <Logo href="/images0/images.jfif">
-      <LogoImage src="" alt="" />
-      TripTogether
+    <Logo>
+      {/* <LogoImage src="../../public/images/TRIPT.png" alt="" /> */}
+      
+      <p>
+      <span style={{ color: 'Orange' }}>Trip</span>
+      <span style={{ color: 'golden' }}>Together</span>
+    </p>
+    
+      
     </Logo>      
     <NavLinks>
         <NavItem>
