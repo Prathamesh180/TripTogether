@@ -36,7 +36,9 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
 import "../styles/SignupPage.css"; // Import the CSS file for styling
-
+import JoinUs from "./JoinUs";
+import MakeMyTrip from "./MakeMyTrip";
+import FormTrip from "./FormTrip";
 import AboutPage from "./AboutPage";
 import HomePage from "./HomePage";
 import ContactPage from "./ContactPage";
@@ -47,7 +49,13 @@ export default function RouterPage() {
     <div>
       <Router>
         <Routes>
+        <Route path="/JoinUs" element={<JoinUs />} />
+
+        <Route path="/MakeMyTrip" element={<MakeMyTrip />} />
+
           <Route path="/AboutPage" element={<AboutPage />} />
+          <Route path="/FormTrip" element={<FormTrip />} />
+
           <Route path="/HomePage" element={<HomePage />} />
           <Route path="/ContactPage" element={<ContactPage />} />
           <Route path="/SignupPage" element={<SignupPage />} />

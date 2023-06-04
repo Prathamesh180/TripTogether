@@ -1,5 +1,5 @@
 .container {
-    max-width: 400px;
+    max-width: 90vh;
     margin: 0 auto;
     padding: 20px;
     background-color: #f0f0f0;
@@ -21,12 +21,15 @@
   }
   
   input[type="email"],
-  input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-  }
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  text-align: center;
+  display: inline-block;
+}
+
   
   button[type="submit"] {
     width: 100%;
