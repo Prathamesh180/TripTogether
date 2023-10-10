@@ -7,8 +7,10 @@ background-color: rgb(224, 222, 182);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 80px;
+  height: 70px;
   padding: 0 2rem;
+ 
+  
 `;
 
 // const Logo = styled.a`
@@ -23,7 +25,7 @@ const NavLinks = styled.ul`
 `;
 
 const NavItem = styled.li`
-  margin: 0 2rem;
+  margin: 0 1.9rem;
 `;
 
 const NavLink = styled.a`
@@ -31,7 +33,8 @@ const NavLink = styled.a`
   color: #333;
   text-decoration: none;
   &:hover {
-    color: #555;
+    color: white;
+    
   }
 `;
 const Logo = styled.a`

@@ -6,7 +6,7 @@ export default function MakeMyTrip() {
     location: '',
     date: '',
     time: '',
-    people: '',
+    member: '',
     gender: '',
     age: ''
   });
@@ -25,7 +25,7 @@ export default function MakeMyTrip() {
       location: formData.location,
       date: formData.date,
       time: formData.time,
-      people: formData.people,
+      member: formData.member,
       gender: formData.gender,
       age: formData.age
     };
@@ -46,7 +46,7 @@ export default function MakeMyTrip() {
             location: '',
             date: '',
             time: '',
-            people: '',
+            member: '',
             gender: '',
             age: ''
           });
@@ -80,7 +80,7 @@ export default function MakeMyTrip() {
         </label>
         <label>
           Number of People:
-          <input type="number" name="people" value={formData.people} onChange={handleChange} />
+          <input type="number" name="member" value={formData.member} onChange={handleChange} />
         </label>
         <label>
           Gender:

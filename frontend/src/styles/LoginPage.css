@@ -34,7 +34,7 @@ input[type="password"] {
   button[type="submit"] {
     width: 100%;
     padding: 10px;
-    background-color: #007bff;
+    background-color:rgb(224, 222, 182);
     color: #fff;
     border: none;
     border-radius: 3px;
@@ -42,7 +42,7 @@ input[type="password"] {
   }
   
   button[type="submit"]:hover {
-    background-color: #0069d9;
+    background-color: #c9a848;
   }
   
   .success-message {

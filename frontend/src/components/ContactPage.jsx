@@ -8,9 +8,7 @@ import '../styles/ContactPage.css';
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // TODO: Add your logic to handle the form submission here
-    // You can send the form data to an API or perform any other action
-    console.log('Form submitted:', name, email, message);
+     console.log('Form submitted:', name, email, message);
     // Reset the form fields
     setName('');
     setEmail('');
@@ -56,4 +54,3 @@ import '../styles/ContactPage.css';
   );
 };
 
-//export default ContactPage;
