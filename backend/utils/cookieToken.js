@@ -7,11 +7,12 @@ const cookie = async (user, res) => {
   };
 
   user.password = undefined;
-  res.status(200).cookie("token", token, options).json({
+res.status(200).cookie("token", token, options).json({
     sucess: true,
     token: token,
     user: user,
   });
+
 };
 
 module.exports = cookie;

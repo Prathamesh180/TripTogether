@@ -14,7 +14,7 @@ const router = express.Router();
 router.route("/register").post(signup);
 
 router.route("/login").post(login);
-router.route("/createtrip").post(isLoggedIn, createTrip);
+router.route("/createtrip").post(createTrip);
 router.route("/trips").get(getAllTrips);
 router.route("/similarinterest").get(isLoggedIn, findUsersWithSimilarInterests);
 
