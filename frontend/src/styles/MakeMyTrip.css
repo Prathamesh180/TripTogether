@@ -1,12 +1,22 @@
 .form-container {
+  background-image: linear-gradient(
+    180deg,
+    
+    rgb(102, 93, 231) 40.8%,
+    rgb(102, 250, 218) 40%,
+    rgb(222, 241, 240) 20%
+    
+  );
     max-width: 400px;
-    margin: 0 auto;
-    height: 82vh;
+    margin:auto ;
+    height: 90.5vh;
+  
   }
   
   .form {
     display: grid;
-    grid-gap: 10px;
+    grid-gap: auto;
+    
   }
   
   label {
@@ -35,5 +45,4 @@
   
   button:hover {
     background-color: #c9a848;
-  }
-  
+  } 

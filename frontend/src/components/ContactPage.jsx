@@ -16,7 +16,7 @@ import '../styles/ContactPage.css';
   };
 
   return (
-    <div className="contact-page" id="/contact">
+    <div className="contact-page" id="ctact">
       <h1>Contact Us</h1>
       <form onSubmit={handleSubmit}>
         <div className="form-group">

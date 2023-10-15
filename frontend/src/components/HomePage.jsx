@@ -8,7 +8,7 @@ const Hero = styled(animated.section)`
 background-repeat: no-repeat;
 background-size: cover;
   background-color: #f8f8f8;
-  height: 85.4vh;
+  height: 90.5vh;
   display: flex;
   flex-direction: column;
   justify-content: left;
@@ -21,7 +21,7 @@ const HeroHeading = styled(animated.h1)`
   font-weight: 700;
   margin-bottom: 2rem;
   text-align: center;
-  color: #333;
+  color: #777;
 `;
 
 const HeroSubheading = styled(animated.p)`
@@ -31,7 +31,7 @@ const HeroSubheading = styled(animated.p)`
   font-weight: 400;
   margin-bottom: 4rem;
   text-align: center;
-  color: #666;
+  color: #999;
 `;
 
 const HeroButton1 = styled(animated.button)`
@@ -49,7 +49,7 @@ const HeroButton1 = styled(animated.button)`
  
   border: none;
   cursor: pointer;
-  margin-left: 144px;
+  margin-left: 130px;
   margin-right:10px;
   margin-top:10px;
   text-decoration:none;
@@ -81,9 +81,9 @@ const HeroButton2 = styled(animated.button)`
 
 export default function HomePage() {
   const props = useSpring({
-    from: { opacity: 0, transform: 'translateY(-50px)' },
-    to: { opacity: 1, transform: 'translateY(0)' },
-    config: { duration: 10 },
+    // from: { opacity: 0, transform: 'translateY(0)' },
+    // to: { opacity: 1, transform: 'translateY(0)' },
+    // config: { duration: 10 },
   });
   
 
