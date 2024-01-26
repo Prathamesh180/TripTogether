@@ -55,8 +55,9 @@ export default function RouterPage() {
 
           <Route path="/AboutPage" element={<AboutPage />} />
           <Route path="/FormTrip" element={<FormTrip />} />
-
-          <Route path="/HomePage" element={<HomePage />} />
+          {/* to home page using menubat tab */}
+          {/* to home page without menubar */}
+          <Route path="/" element={<HomePage />} />
           <Route path="/ContactPage" element={<ContactPage />} />
           <Route path="/SignupPage" element={<SignupPage />} />
           <Route path="/LoginPage" element={<LoginPage />} />

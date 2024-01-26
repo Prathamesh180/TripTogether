@@ -62,8 +62,9 @@ export default function MakeMyTrip() {
       });
   };
 
-  return (
-    <div className="form-container">
+  return(
+    
+    <div className="form-container bg-green-300">
       <h2>Fill in the Form</h2>
       <form className="form" onSubmit={handleSubmit}>
         <label>
@@ -95,10 +96,13 @@ export default function MakeMyTrip() {
           Age:
           <input type="number" name="age" value={formData.age} onChange={handleChange} />
         </label>
-        <button type="submit">Submit</button>
+        <button type="submit" >Submit</button>
       </form>
       {successMessage && <p className="success-message">{successMessage}</p>}
       {errorMessage && <p className="error-message">{errorMessage}</p>}
     </div>
-  );
+   
+
+    
+  )
 }

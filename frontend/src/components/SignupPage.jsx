@@ -63,7 +63,7 @@ export default function SignupPage() {
         <label>
           Phone:
           <input
-            type="text"
+            type="number"
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
           />

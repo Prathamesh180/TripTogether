@@ -6,7 +6,7 @@ import '@fortawesome/fontawesome-free/css/all.css';
 const About = styled.section`
   margin: auto;
   padding: 5.4rem;
-  height: 60vh;
+  height: 86vh;
 `;
 
 const Heading = styled.h2`
@@ -26,6 +26,7 @@ const AboutText = styled.p`
 const SocialMediaWrapper = styled.div`
   display: flex;
   justify-content: center;
+  padding-top:2rem;
   margin-top: 2rem;
 `;
 
@@ -37,12 +38,13 @@ const SocialMediaIcon = styled.a`
   height: 4rem;
   border-radius: 50%;
   margin: 0 0.5rem;
-  background-color: #ccc;
+  background-color: #aaa777;
   color: #fff;
   text-decoration: none;
   transition: background-color 0.3s ease;
 
   &:hover {
+    color:#fff;
     background-color: #333;
   }
 `;

@@ -9,6 +9,7 @@ background-color: rgb(224, 222, 182);
   align-items: center;
   height: 70px;
   padding: 0 2rem;
+  border-radius:20px;
  
   
 `;
@@ -65,7 +66,7 @@ export default function Navbar() {
     </Logo>      
     <NavLinks>
         <NavItem>
-          <NavLink href="/HomePage">Home</NavLink>
+          <NavLink href="/">Home</NavLink>
         </NavItem>
         <NavItem>
           <NavLink href="/AboutPage">About</NavLink>
@@ -78,14 +79,16 @@ export default function Navbar() {
           <NavLink href="/ContactPage">Contact</NavLink>
         </NavItem>
         <NavItem>
-          <NavLink href="/SignupPage">Join</NavLink>
+          <NavLink href="/SignupPage">Sign-up</NavLink>
         </NavItem>
         <NavItem>
-          <NavLink href="/LoginPage">Login</NavLink>
+          <NavLink href="/LoginPage">Sign-in</NavLink>
         </NavItem>
         
       </NavLinks>
     </Nav>
+    
+  
   );
 }
 
